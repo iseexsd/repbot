@@ -4,6 +4,7 @@ var fs = require("fs")
 var bot = new Discord.Client()
 
 const repFileStorage = require("./repStorage.json");
+const token = require("./settings.json")["token"]
 
 bot.on("message", (message) => {
     if(message.author.bot) return
@@ -61,4 +62,4 @@ bot.on("ready", () => {
     console.log("ready fredy!")
 })
 
-bot.login("NzA2ODU0Njg1ODY4NDI1MzI2.XrATwA.9qKXVyaD9Y42G9R06ptdtod5X18")
+bot.login(token)
